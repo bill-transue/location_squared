@@ -1,0 +1,19 @@
+common: &common
+  adapter: postgresql
+  username: location_squared
+  password: change_me
+
+development:
+  <<: *common
+  database: location_squared_development
+
+test: &test
+  <<: *common
+  database: location_squared_test
+
+production:
+  <<: *common
+  database: location_squared
+
+cucumber:
+  <<: *test
