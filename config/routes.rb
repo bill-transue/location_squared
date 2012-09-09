@@ -1,4 +1,7 @@
 LocationSquared::Application.routes.draw do
+  devise_for :users
+
+  match '/auth/:provider/callback' => 'sessions#create'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
