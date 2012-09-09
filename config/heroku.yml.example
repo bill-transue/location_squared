@@ -1,0 +1,21 @@
+apps:
+  staging: location-squared-staging
+  production: location-squared
+
+development: &defaults
+  domain_url: http://localhost:3000
+  foursq_key: key
+  foursq_secret: secret
+
+test:
+  <<: *defaults
+
+staging:
+  domain_url: http://location-squared-staging.heroku.com
+  foursq_key: key
+  foursq_secret: secret
+
+production:
+  domain_url: http://location-squared.heroku.com
+  foursq_key: key
+  foursq_secret: secret
